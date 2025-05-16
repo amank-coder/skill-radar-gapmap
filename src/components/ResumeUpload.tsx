@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { FileUpload, Upload, Check } from "lucide-react";
+import { Upload, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
@@ -89,7 +89,7 @@ const ResumeUpload = () => {
       >
         {!file ? (
           <>
-            <FileUpload className="mx-auto h-12 w-12 text-muted-foreground mb-3" />
+            <Upload className="mx-auto h-12 w-12 text-muted-foreground mb-3" />
             <h3 className="font-medium text-lg mb-2">Drag & drop your resume here</h3>
             <p className="text-muted-foreground mb-6">or</p>
             <Button variant="secondary" className="relative">
