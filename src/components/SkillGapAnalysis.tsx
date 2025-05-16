@@ -39,15 +39,15 @@ const mockMissingSkills = getMissingSkills(mockResumeSkills, mockJobSkills);
 
 // Data for pie chart
 const data = [
-  { name: "Have", value: mockResumeSkills.length, color: "#8B5CF6" },
-  { name: "Missing", value: mockMissingSkills.length, color: "#F97316" }
+  { name: "Have", value: mockResumeSkills.length, color: "#E5DEFF" }, // Pastel purple
+  { name: "Missing", value: mockMissingSkills.length, color: "#FDE1D3" } // Pastel peach
 ];
 
 const renderSkillItem = (skill: string, isChecked: boolean, handleCheck: (skill: string) => void, isMissing = false) => (
   <div 
     key={skill} 
     className={`flex items-center p-2 rounded-md transition-colors ${
-      isMissing ? "hover:bg-gapmap-orange/10" : "hover:bg-gapmap-purple/10"
+      isMissing ? "hover:bg-gapmap-pastel-peach/10" : "hover:bg-gapmap-pastel-purple/10"
     }`}
   >
     {isMissing && (
@@ -56,10 +56,10 @@ const renderSkillItem = (skill: string, isChecked: boolean, handleCheck: (skill:
         id={`skill-${skill}`}
         checked={isChecked}
         onChange={() => handleCheck(skill)}
-        className="mr-2 rounded text-gapmap-purple focus:ring-gapmap-purple border-gapmap-gray"
+        className="mr-2 rounded text-gapmap-pastel-purple focus:ring-gapmap-pastel-purple border-gapmap-gray"
       />
     )}
-    <span className={isMissing ? "text-gapmap-orange" : ""}>{skill}</span>
+    <span className={isMissing ? "text-gapmap-pastel-peach" : ""}>{skill}</span>
   </div>
 );
 
@@ -88,7 +88,7 @@ const SkillGapAnalysis = () => {
   const missingPercentage = Math.round((mockMissingSkills.length / mockJobSkills.length) * 100);
 
   return (
-    <div className="glass-card p-6 rounded-xl">
+    <div className="glass-card p-6 rounded-xl bg-pastel-gradient">
       <h2 className="text-xl font-semibold mb-6">Skill Gap Analysis</h2>
       
       <div className="grid grid-cols-1 lg:grid-cols-7 gap-6">
@@ -149,10 +149,10 @@ const SkillGapAnalysis = () => {
               </div>
               <div className="text-right">
                 <p className="text-sm text-muted-foreground">Gap Percentage</p>
-                <p className="text-2xl font-bold text-gapmap-orange">{missingPercentage}%</p>
+                <p className="text-2xl font-bold text-gapmap-pastel-peach">{missingPercentage}%</p>
                 <Button
                   onClick={handleFetchSuggestions}
-                  className="mt-2 bg-gapmap-purple hover:bg-gapmap-purple-light text-white text-xs"
+                  className="mt-2 bg-gradient-to-r from-gapmap-pastel-purple to-gapmap-pastel-blue hover:from-gapmap-pastel-purple hover:to-gapmap-pastel-blue text-white text-xs"
                   size="sm"
                   disabled={selectedSkills.length === 0}
                 >

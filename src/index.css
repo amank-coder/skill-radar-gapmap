@@ -49,7 +49,7 @@
 
 @layer base {
   * {
-    @apply border-border selection:bg-gapmap-purple/10 selection:text-gapmap-purple;
+    @apply border-border selection:bg-gapmap-pastel-purple/20 selection:text-gapmap-pastel-purple;
   }
   
   body {
@@ -76,8 +76,8 @@
   }
   
   .glass-card {
-    @apply backdrop-blur-lg bg-gapmap-charcoal/80 border border-gapmap-gray/30 shadow-lg
-    transition duration-300 hover:shadow-xl hover:border-gapmap-gray/40;
+    @apply backdrop-blur-lg bg-gapmap-charcoal/80 border border-gapmap-pastel-purple/20 shadow-lg
+    transition duration-300 hover:shadow-xl hover:border-gapmap-pastel-purple/30;
   }
   
   .text-gradient {
@@ -85,15 +85,15 @@
   }
   
   .text-gradient-purple {
-    @apply bg-gradient-to-r from-gapmap-purple to-gapmap-purple-light bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-gapmap-pastel-purple to-gapmap-pastel-blue bg-clip-text text-transparent;
   }
   
   .text-gradient-orange {
-    @apply bg-gradient-to-r from-gapmap-orange to-amber-300 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-gapmap-pastel-peach to-gapmap-pastel-yellow bg-clip-text text-transparent;
   }
   
   .bg-gradient-purple {
-    @apply bg-gradient-to-br from-gapmap-purple to-gapmap-purple-dark;
+    @apply bg-gradient-to-br from-gapmap-pastel-purple to-gapmap-pastel-purple-dark;
   }
   
   .bg-gradient-dark {
@@ -105,6 +105,10 @@
   }
   
   .border-gradient {
-    border-image: linear-gradient(to right, #8B5CF6, #6941C6) 1;
+    border-image: linear-gradient(to right, #E5DEFF, #D3E4FD) 1;
+  }
+  
+  .bg-pastel-gradient {
+    @apply bg-gradient-to-br from-gapmap-pastel-purple/20 via-gapmap-pastel-blue/15 to-gapmap-pastel-purple-dark/10;
   }
 }

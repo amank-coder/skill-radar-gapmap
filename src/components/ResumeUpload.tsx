@@ -72,7 +72,7 @@ const ResumeUpload = () => {
   };
 
   return (
-    <div className="glass-card p-6 rounded-xl bg-gradient-to-br from-gapmap-charcoal to-gapmap-dark border-gapmap-purple/20">
+    <div className="glass-card p-6 rounded-xl bg-pastel-gradient border-gapmap-pastel-purple/20">
       <h2 className="text-xl font-semibold mb-2 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Upload Your Resume</h2>
       <p className="text-muted-foreground mb-6">
         Upload your resume in PDF format to analyze your skills
@@ -80,7 +80,7 @@ const ResumeUpload = () => {
       
       <div
         className={`border-2 border-dashed rounded-lg p-8 text-center transition ${
-          file ? "border-gapmap-purple/40 bg-gradient-to-br from-gapmap-purple/10 to-transparent" : "border-gapmap-gray/30 hover:border-gapmap-purple/30 hover:bg-gradient-to-br hover:from-gapmap-purple/5 hover:to-transparent"
+          file ? "border-gapmap-pastel-purple/40 bg-gradient-to-br from-gapmap-pastel-purple/10 to-transparent" : "border-gapmap-gray/30 hover:border-gapmap-pastel-purple/30 hover:bg-gradient-to-br hover:from-gapmap-pastel-purple/5 hover:to-transparent"
         }`}
         onDragOver={preventDefaults}
         onDragEnter={preventDefaults}
@@ -94,7 +94,7 @@ const ResumeUpload = () => {
             <p className="text-muted-foreground mb-6">or</p>
             <Button 
               variant="secondary" 
-              className="relative bg-gradient-to-r from-gapmap-purple/80 to-gapmap-purple-dark/80 hover:from-gapmap-purple hover:to-gapmap-purple-dark text-white border-none"
+              className="relative bg-gradient-to-r from-gapmap-pastel-purple/80 to-gapmap-pastel-blue/80 hover:from-gapmap-pastel-purple hover:to-gapmap-pastel-blue text-white border-none"
             >
               <input
                 type="file"
@@ -112,11 +112,11 @@ const ResumeUpload = () => {
           <div className="flex flex-col items-center">
             {uploading ? (
               <>
-                <Upload className="h-12 w-12 text-gapmap-purple animate-pulse mb-3" />
+                <Upload className="h-12 w-12 text-gapmap-pastel-purple animate-pulse mb-3" />
                 <h3 className="font-medium text-lg mb-4">Uploading...</h3>
                 <div className="w-full max-w-xs bg-gapmap-gray/30 rounded-full h-2.5 mb-4">
                   <div
-                    className="bg-gradient-to-r from-gapmap-purple to-gapmap-purple-light h-2.5 rounded-full transition-all duration-300"
+                    className="bg-gradient-to-r from-gapmap-pastel-purple to-gapmap-pastel-blue h-2.5 rounded-full transition-all duration-300"
                     style={{ width: `${progress}%` }}
                   />
                 </div>
@@ -124,8 +124,8 @@ const ResumeUpload = () => {
               </>
             ) : (
               <>
-                <div className="h-12 w-12 rounded-full bg-gradient-to-br from-gapmap-purple/30 to-gapmap-purple-dark/30 flex items-center justify-center mb-3">
-                  <Check className="h-6 w-6 text-gapmap-purple" />
+                <div className="h-12 w-12 rounded-full bg-gradient-to-br from-gapmap-pastel-purple/30 to-gapmap-pastel-blue/30 flex items-center justify-center mb-3">
+                  <Check className="h-6 w-6 text-gapmap-pastel-purple" />
                 </div>
                 <h3 className="font-medium text-lg mb-2">Upload Complete!</h3>
                 <p className="text-muted-foreground mb-4">{file.name}</p>
@@ -133,7 +133,7 @@ const ResumeUpload = () => {
                   variant="outline"
                   size="sm"
                   onClick={() => setFile(null)}
-                  className="border-gapmap-purple/30 text-gapmap-purple hover:bg-gapmap-purple/10"
+                  className="border-gapmap-pastel-purple/30 text-gapmap-pastel-purple hover:bg-gapmap-pastel-purple/10"
                 >
                   Change File
                 </Button>
