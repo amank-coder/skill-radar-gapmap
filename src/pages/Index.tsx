@@ -7,7 +7,7 @@ import ProjectSuggestions from "@/components/ProjectSuggestions";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gapmap-light text-gapmap-charcoal">
+    <div className="min-h-screen bg-gapmap-dark text-white">
       <Header />
       
       <main className="container mx-auto pt-6 pb-12 px-4 md:px-6">

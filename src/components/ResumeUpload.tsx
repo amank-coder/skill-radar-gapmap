@@ -72,15 +72,15 @@ const ResumeUpload = () => {
   };
 
   return (
-    <div className="glass-card p-6 rounded-xl bg-pastel-gradient">
-      <h2 className="text-xl font-semibold mb-2 text-gradient-purple">Upload Your Resume</h2>
+    <div className="glass-card p-6 rounded-xl">
+      <h2 className="text-xl font-semibold mb-2">Upload Your Resume</h2>
       <p className="text-muted-foreground mb-6">
         Upload your resume in PDF format to analyze your skills
       </p>
       
       <div
         className={`border-2 border-dashed rounded-lg p-8 text-center transition ${
-          file ? "border-gapmap-pastel-purple/60 bg-gradient-to-br from-gapmap-pastel-purple/10 to-transparent" : "border-gapmap-gray/30 hover:border-gapmap-pastel-purple/40 hover:bg-gradient-to-br hover:from-gapmap-pastel-purple/5 hover:to-transparent"
+          file ? "border-gapmap-purple/30 bg-gapmap-purple/5" : "border-gapmap-gray/30 hover:border-gapmap-purple/30 hover:bg-gapmap-purple/5"
         }`}
         onDragOver={preventDefaults}
         onDragEnter={preventDefaults}
@@ -89,13 +89,10 @@ const ResumeUpload = () => {
       >
         {!file ? (
           <>
-            <Upload className="mx-auto h-12 w-12 text-gapmap-pastel-purple-dark mb-3" />
-            <h3 className="font-medium text-lg mb-2 text-gapmap-charcoal">Drag & drop your resume here</h3>
+            <Upload className="mx-auto h-12 w-12 text-muted-foreground mb-3" />
+            <h3 className="font-medium text-lg mb-2">Drag & drop your resume here</h3>
             <p className="text-muted-foreground mb-6">or</p>
-            <Button 
-              variant="secondary" 
-              className="relative bg-gradient-to-r from-gapmap-pastel-purple to-gapmap-pastel-blue hover:from-gapmap-pastel-purple-dark hover:to-gapmap-pastel-blue-dark text-white border-none"
-            >
+            <Button variant="secondary" className="relative">
               <input
                 type="file"
                 className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
@@ -112,11 +109,11 @@ const ResumeUpload = () => {
           <div className="flex flex-col items-center">
             {uploading ? (
               <>
-                <Upload className="h-12 w-12 text-gapmap-pastel-purple-dark animate-pulse mb-3" />
-                <h3 className="font-medium text-lg mb-4 text-gapmap-charcoal">Uploading...</h3>
+                <Upload className="h-12 w-12 text-gapmap-purple animate-pulse mb-3" />
+                <h3 className="font-medium text-lg mb-4">Uploading...</h3>
                 <div className="w-full max-w-xs bg-gapmap-gray/30 rounded-full h-2.5 mb-4">
                   <div
-                    className="bg-gradient-to-r from-gapmap-pastel-purple to-gapmap-pastel-blue h-2.5 rounded-full transition-all duration-300"
+                    className="bg-gapmap-purple h-2.5 rounded-full transition-all duration-300"
                     style={{ width: `${progress}%` }}
                   />
                 </div>
@@ -124,16 +121,15 @@ const ResumeUpload = () => {
               </>
             ) : (
               <>
-                <div className="h-12 w-12 rounded-full bg-gradient-to-br from-gapmap-pastel-purple/30 to-gapmap-pastel-blue/30 flex items-center justify-center mb-3">
-                  <Check className="h-6 w-6 text-gapmap-pastel-purple-dark" />
+                <div className="h-12 w-12 rounded-full bg-gapmap-purple/20 flex items-center justify-center mb-3">
+                  <Check className="h-6 w-6 text-gapmap-purple" />
                 </div>
-                <h3 className="font-medium text-lg mb-2 text-gapmap-charcoal">Upload Complete!</h3>
+                <h3 className="font-medium text-lg mb-2">Upload Complete!</h3>
                 <p className="text-muted-foreground mb-4">{file.name}</p>
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={() => setFile(null)}
-                  className="border-gapmap-pastel-purple/30 text-gapmap-pastel-purple-dark hover:bg-gapmap-pastel-purple/10"
                 >
                   Change File
                 </Button>

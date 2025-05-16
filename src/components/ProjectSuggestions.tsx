@@ -95,13 +95,13 @@ const mockGithubRepos = {
 const ProjectSuggestions = ({ selectedSkills = ["Machine Learning", "Deep Learning"] }) => {
   return (
     <div className="glass-card p-6 rounded-xl mb-10">
-      <h2 className="text-xl font-semibold mb-6 text-gradient-purple">Project Suggestions</h2>
+      <h2 className="text-xl font-semibold mb-6">Project Suggestions</h2>
 
       <div className="space-y-8">
         {selectedSkills.map((skill) => (
           <div key={skill} className="animate-fade-in">
             <div className="flex items-center gap-2 mb-4">
-              <h3 className="text-lg font-medium text-gapmap-charcoal">{skill}</h3>
+              <h3 className="text-lg font-medium">{skill}</h3>
               <div className="h-px flex-1 bg-gapmap-gray/20"></div>
             </div>
 
@@ -115,10 +115,10 @@ const ProjectSuggestions = ({ selectedSkills = ["Machine Learning", "Deep Learni
                       key={index} 
                       className="glass-morphism p-4 rounded-lg hover:border-gapmap-purple/30 transition-colors"
                     >
-                      <h5 className="font-medium mb-2 text-gapmap-charcoal">{project.title}</h5>
+                      <h5 className="font-medium mb-2">{project.title}</h5>
                       <p className="text-xs text-muted-foreground mb-3">{project.description}</p>
                       <div className="flex justify-between items-center">
-                        <span className="text-xs px-2 py-0.5 rounded-full bg-gapmap-pastel-purple/20 text-gapmap-pastel-purple-dark">
+                        <span className="text-xs px-2 py-0.5 rounded-full bg-gapmap-purple/20 text-gapmap-purple">
                           {project.difficulty}
                         </span>
                       </div>
@@ -139,7 +139,7 @@ const ProjectSuggestions = ({ selectedSkills = ["Machine Learning", "Deep Learni
                       <div className="flex justify-between items-start">
                         <div className="flex items-center gap-2">
                           <Github className="h-4 w-4 text-muted-foreground" />
-                          <h5 className="font-medium text-gapmap-charcoal">{repo.name}</h5>
+                          <h5 className="font-medium">{repo.name}</h5>
                         </div>
                         <span className="text-xs px-2 py-0.5 rounded-full bg-gapmap-gray/30 text-muted-foreground">
                           ★ {repo.stars}
@@ -149,7 +149,7 @@ const ProjectSuggestions = ({ selectedSkills = ["Machine Learning", "Deep Learni
                       <Button 
                         size="sm" 
                         variant="outline" 
-                        className="text-xs w-full mt-2 flex items-center justify-center gap-1 border-gapmap-pastel-purple/30 text-gapmap-pastel-purple-dark hover:bg-gapmap-pastel-purple/10"
+                        className="text-xs w-full mt-2 flex items-center justify-center gap-1"
                         asChild
                       >
                         <a href={repo.url} target="_blank" rel="noopener noreferrer">

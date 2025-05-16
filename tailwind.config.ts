@@ -64,25 +64,15 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				gapmap: {
-					light: "#F8FAFC",
-					lighter: "#FFFFFF",
-					charcoal: "#4A5568",
-					gray: "#CBD5E0",
+					dark: "#151A2D",
+					darker: "#0F1219",
+					charcoal: "#222630",
+					gray: "#333742",
 					purple: "#8B5CF6",
 					"purple-light": "#9775fa",
 					"purple-dark": "#6941c6",
 					orange: "#F97316",
-					red: "#ef4444",
-					"pastel-purple": "#E5DEFF",
-					"pastel-blue": "#D3E4FD",
-					"pastel-purple-dark": "#B8B5FF",
-					"pastel-blue-dark": "#A4C2F4",
-					"pastel-peach": "#FDE1D3",
-					"pastel-yellow": "#FEF7CD",
-					"pastel-green": "#F2FCE2",
-					"pastel-pink": "#FFDEE2",
-					"pastel-peach-dark": "#FFBD98",
-					"pastel-yellow-dark": "#FFEBB3"
+					red: "#ef4444"
 				}
 			},
 			borderRadius: {
