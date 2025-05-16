@@ -17,7 +17,7 @@ const JobDomainSelect = () => {
 
   return (
     <div className="glass-card p-6 rounded-xl bg-pastel-gradient">
-      <h2 className="text-xl font-semibold mb-2">Select Job Domain</h2>
+      <h2 className="text-xl font-semibold mb-2 text-gradient-purple">Select Job Domain</h2>
       <p className="text-muted-foreground mb-6">
         Specify your target job title or domain
       </p>
@@ -27,7 +27,7 @@ const JobDomainSelect = () => {
         <Input
           type="text"
           placeholder="Enter job title (e.g., Data Scientist)"
-          className="pl-10 bg-gapmap-gray/30 border-gapmap-gray/30 focus:border-gapmap-pastel-purple focus:ring-gapmap-pastel-purple"
+          className="pl-10 bg-white/60 border-gapmap-gray/20 focus:border-gapmap-pastel-purple focus:ring-gapmap-pastel-purple"
           value={jobDomain}
           onChange={(e) => setJobDomain(e.target.value)}
         />
@@ -43,7 +43,7 @@ const JobDomainSelect = () => {
               size="sm"
               className={`text-xs ${
                 jobDomain === domain
-                  ? "bg-gapmap-pastel-purple/20 border-gapmap-pastel-purple/40 text-gapmap-pastel-purple"
+                  ? "bg-gapmap-pastel-purple/20 border-gapmap-pastel-purple/40 text-gapmap-pastel-purple-dark"
                   : "hover:bg-gapmap-pastel-purple/10 hover:border-gapmap-pastel-purple/30"
               }`}
               onClick={() => setJobDomain(domain)}
@@ -55,7 +55,7 @@ const JobDomainSelect = () => {
       </div>
       
       <Button 
-        className="w-full bg-gradient-to-r from-gapmap-pastel-purple to-gapmap-pastel-blue hover:from-gapmap-pastel-purple hover:to-gapmap-pastel-blue-dark text-white"
+        className="w-full bg-gradient-to-r from-gapmap-pastel-purple to-gapmap-pastel-blue hover:from-gapmap-pastel-purple-dark hover:to-gapmap-pastel-blue-dark text-white"
         disabled={!jobDomain}
       >
         Analyze Skill Gaps

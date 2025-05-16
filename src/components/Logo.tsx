@@ -8,7 +8,7 @@ const Logo = ({ className = "" }: { className?: string }) => {
         <MapPin size={18} className="text-white" />
         <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-gapmap-pastel-peach to-gapmap-pastel-yellow rounded-full animate-pulse-slow" />
       </div>
-      <span className="font-bold text-xl bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">GapMap</span>
+      <span className="font-bold text-xl bg-gradient-to-r from-gapmap-purple-dark via-gapmap-purple to-gapmap-purple-light bg-clip-text text-transparent">GapMap</span>
     </div>
   );
 };
