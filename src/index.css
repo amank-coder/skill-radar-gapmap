@@ -83,4 +83,28 @@
   .text-gradient {
     @apply bg-gradient-to-br from-white via-white/90 to-white/70 bg-clip-text text-transparent;
   }
+  
+  .text-gradient-purple {
+    @apply bg-gradient-to-r from-gapmap-purple to-gapmap-purple-light bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-orange {
+    @apply bg-gradient-to-r from-gapmap-orange to-amber-300 bg-clip-text text-transparent;
+  }
+  
+  .bg-gradient-purple {
+    @apply bg-gradient-to-br from-gapmap-purple to-gapmap-purple-dark;
+  }
+  
+  .bg-gradient-dark {
+    @apply bg-gradient-to-br from-gapmap-dark to-gapmap-darker;
+  }
+  
+  .bg-gradient-card {
+    @apply bg-gradient-to-br from-gapmap-charcoal to-gapmap-dark;
+  }
+  
+  .border-gradient {
+    border-image: linear-gradient(to right, #8B5CF6, #6941C6) 1;
+  }
 }
