@@ -1,73 +1,86 @@
-# Welcome to your Lovable project
+# GapMap - AI-Powered Skill Gap Analyzer
 
-## Project info
+GapMap is an intelligent web application that analyzes resumes, identifies skill gaps, and provides personalized learning resources and networking opportunities.
 
-**URL**: https://lovable.dev/projects/9aabb728-cfec-4bd3-b47f-ba09b8da4e05
+## Features
 
-## How can I edit this code?
+- **Resume Analysis**: Upload PDF/DOC/DOCX resumes for instant skill analysis
+- **Skill Gap Detection**: Compare your skills against job requirements
+- **Learning Resources**: Get personalized project suggestions and GitHub repositories
+- **Professional Networking**: Find relevant LinkedIn connections in your area
+- **Modern UI**: Clean, responsive interface with a beautiful gradient theme
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+### Frontend
+- React with TypeScript
+- Vite for build tooling
+- TailwindCSS for styling
+- Shadcn/ui for UI components
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9aabb728-cfec-4bd3-b47f-ba09b8da4e05) and start prompting.
+### Backend
+- Python Flask server
+- Google Gemini AI for analysis
+- Multiple API integrations (GitHub, LinkedIn, Job Search)
+- PDF and DOC/DOCX text extraction
 
-Changes made via Lovable will be committed automatically to this repo.
+## Setup
 
-**Use your preferred IDE**
+### Prerequisites
+- Node.js (v16 or higher)
+- Python 3.8+
+- API Keys:
+  - Google Gemini AI
+  - RapidAPI (for job search)
+  - GitHub API
+  - SerpAPI (for LinkedIn profiles)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Backend Setup
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env  # Create and configure your .env file
+python app.py
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Frontend Setup
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at:
+- Frontend: http://localhost:8081
+- Backend: http://localhost:5001
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Environment Variables
 
-**Use GitHub Codespaces**
+Create a `.env` file in the backend directory with:
+```
+GOOGLE_API_KEY=your_gemini_api_key
+RAPID_API_KEY=your_rapid_api_key
+GITHUB_TOKEN=your_github_token
+SERP_API_KEY=your_serp_api_key
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Usage
 
-## What technologies are used for this project?
+1. Upload your resume (PDF, DOC, or DOCX format)
+2. Enter your target job domain
+3. View the skill gap analysis
+4. Select missing skills to get learning resources
+5. Enter location to find relevant LinkedIn connections
 
-This project is built with:
+## Contributing
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## How can I deploy this project?
+## License
 
-Simply open [Lovable](https://lovable.dev/projects/9aabb728-cfec-4bd3-b47f-ba09b8da4e05) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is licensed under the MIT License - see the LICENSE file for details. 

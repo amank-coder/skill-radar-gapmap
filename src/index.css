@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -7,33 +6,33 @@
 
 @layer base {
   :root {
-    --background: 222 47% 11%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
 
-    --card: 222 47% 11%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 222 47% 11%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 262 83% 66%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 217 89% 61%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 8% 23%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 240 8% 23%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 240 8% 23%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222 47% 11%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 240 8% 23%;
-    --input: 240 8% 23%;
-    --ring: 240 4.9% 83.9%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 217 89% 61%;
     --radius: 0.75rem;
 
     --sidebar-background: 240 5.9% 10%;
@@ -49,11 +48,11 @@
 
 @layer base {
   * {
-    @apply border-border selection:bg-gapmap-purple/10 selection:text-gapmap-purple;
+    @apply border-border;
   }
   
   body {
-    @apply bg-gapmap-dark text-foreground font-['Inter',sans-serif] antialiased;
+    @apply bg-background text-foreground font-['Inter',sans-serif] antialiased;
   }
 
   html {
@@ -71,16 +70,12 @@
     display: none;
   }
 
-  .glass-morphism {
-    @apply backdrop-blur-lg bg-white/5 border border-white/10 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.3)];
-  }
-  
   .glass-card {
-    @apply backdrop-blur-lg bg-gapmap-charcoal/80 border border-gapmap-gray/30 shadow-lg
-    transition duration-300 hover:shadow-xl hover:border-gapmap-gray/40;
+    @apply backdrop-blur-lg bg-white/80 border border-gray-200/30 shadow-lg
+    transition duration-300 hover:shadow-xl hover:border-[#6499E9]/40;
   }
   
   .text-gradient {
-    @apply bg-gradient-to-br from-white via-white/90 to-white/70 bg-clip-text text-transparent;
+    @apply bg-gradient-to-br from-[#6499E9] via-[#9EDDFF] to-[#6499E9]/70 bg-clip-text text-transparent;
   }
 }
