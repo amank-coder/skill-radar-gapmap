@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { Card } from './ui/card';
-import { cn } from '../lib/utils';
+import { cn } from '@/lib/utils';
 import { CloudUpload } from 'lucide-react';
 
 interface FileUploadProps {
