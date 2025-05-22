@@ -1,6 +1,6 @@
 import { ResumeAnalysis, SkillSuggestions, LinkedInProfile } from '../types';
 
-const API_BASE_URL = '/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL;;
 
 export async function analyzeResume(file: File, domain: string): Promise<ResumeAnalysis> {
   const formData = new FormData();
